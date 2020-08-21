@@ -1,3 +1,3 @@
-# ComputerScience
+# ComputerLearning
 [learning]  
-All about computer
+All about computer essential thought 
