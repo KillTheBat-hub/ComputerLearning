@@ -138,11 +138,11 @@ The definition of procedure refers to the procedure itself, either directly or i
 
 iteration process of 6!:  
 ![image](https://github.com/KillTheBat-hub/functional-programming/blob/master/scheme/learn/MIT%206.001/notes/images/ch1_iterative.PNG)    
-时间复杂度O(x)-所需时间随着x+1而+1/linear，空间复杂度O(1)-无推后执行   
+时间复杂度O(x)-所需时间随着x+1而+1-linear，空间复杂度O(1)-无推后执行   
 
 recursion process of 6!:  
 ![image](https://github.com/KillTheBat-hub/functional-programming/blob/master/scheme/learn/MIT%206.001/notes/images/ch1_recursive.PNG)
-时间复杂度O(x)-所需时间随x+1而+2/linear，空间复杂度O(x)-推后执行步骤数=x    
+时间复杂度O(x)-所需时间随x+1而+2-linear，空间复杂度O(x)-推后执行步骤数=x    
 几组代码体会iteration和recursion：  
 
       ; 1.x+y
@@ -176,6 +176,15 @@ recursion process of 6!:
 *scheme语言`tail-recursive`，不需要for和while就能构建循环  
 
 #### tree recursion
+以`Fibonacci numbers`运算为例。斐波那契数列，0,1,1,2,3,5,8,...
+<img src="" width=40%>
+
+      (define (fibonacci n)
+        (cond ((= n 0) 0)
+              ((= n 1) 1)
+              (else (+ (fibonacci (- n 1))
+                      (fibonacci (- n 2))))))
+      (fibonacci 8)
 
 
 
