@@ -32,3 +32,5 @@ finally:
 >>> newfile
    <_io.TextIOWrapper name='newfile.txt' mode='w' encoding='cp936'>
 '''
+#解决方法：file.close()，再次以"r"模式打开，依然是TextIOWrapper但是可以file.read()
+# ?????????
