@@ -38,4 +38,4 @@ finally:
 #file.read()
 #file.read()只能用一次，因为相当于光标会停到文档最后
 #file.close()后再次open，file.read()依然为空。解决方法有：file.seek(0)回到开头，试过后无效
-#？？？？？？？？？？？
+#原因：每次以"w"模式打开，file都会清空。使用"a"append模式，在文档末尾添加新内容。
