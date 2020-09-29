@@ -1,4 +1,3 @@
-
 # try...exception..finally
 '''  
 ？？？？？？？？
@@ -55,3 +54,19 @@ dic[2]=raise ValueError("value error")
 dic[2]=ValueError("value error")
 #dic[2]并不会显示为ValueError:value error。但是它的type是<class ValueError>
 #????????????
+
+
+#for iteration
+#把lis中的每一个元素变成tuple格式
+lis=[1,2,3,[4,5]]
+#1
+for i in lis:
+  lis[i]=tuple(lis[i])
+#2
+for i in len(lis):
+  lis[i]=tuple(lis[i])
+#3
+for i in range(len(lis)):
+  lis[i]=tuple(lis[i])
+
+#?????????????????
