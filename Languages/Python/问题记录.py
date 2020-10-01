@@ -70,3 +70,15 @@ for i in range(len(lis)):
   lis[i]=tuple(lis[i])
 
 #?????????????????
+
+#类型转换后使用function
+lis=["hello","all","you","guys"]
+print(str(lis).upper())
+print(str(lis)+"ohhhhhhh")
+print((str(lis)+"ohhhhhhh").upper())
+#list变str常见办法是",".join(lis)，变为str type，然后通过lis.split()变回
+lis=",".join(lis)
+print(lis.split())
+print(lis.split(","))
+
+
