@@ -56,7 +56,8 @@ dic[2]=ValueError("value error")
 #????????????
 
 
-#for iteration
+#for循环
+#for循环中的前后两个参数的指定规则：for x in ...,就是把...中的所有元素一一代入x
 #把lis中的每一个元素变成tuple格式
 lis=[1,2,3,[4,5]]
 #1
@@ -82,3 +83,20 @@ print(lis.split())
 print(lis.split(","))
 
 
+#文件打开与内容操作
+def count_char(text, char):
+  count = 0
+  for c in text:
+    if c == char:
+      count += 1
+  return count
+
+filename = input("Enter a filename: ")
+with open(filename) as f:
+  text = f.read()
+
+for char in "abcdefghijklmnopqrstuvwxyz":
+  perc = 100 * count_char(text, char) / len(text)
+  print("{0} - {1}%".format(char, round(perc, 2)))
+#问题：重复的字母重复执行
+#解决：？？？？？？？？？？？？？？？
