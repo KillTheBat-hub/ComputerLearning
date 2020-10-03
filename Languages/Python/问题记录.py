@@ -113,3 +113,12 @@ for char in "abcdefghijklmnopqrstuvwxyz":
   print("{0} - {1}%".format(char, round(perc, 2)))
 #问题：重复的字母重复执行
 #解决：？？？？？？？？？？？？？？？
+
+
+#anoymous functions:lambda
+#python吸取了部分函数式编程的思想，保留了单变量lambda函数
+type((lambda x:x+1)(2)) #<class 'int'>
+type(lambda x:x+1)  #<class 'function'>
+type(lambda x:x+1, 2)  #<class 'tuple'>
+#问题：lambda函数在python中是如何认定的？
+#解决：？？？？？？？？？？？？？？？？？？？？？
