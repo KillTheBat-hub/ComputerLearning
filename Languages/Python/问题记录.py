@@ -116,7 +116,7 @@ for char in "abcdefghijklmnopqrstuvwxyz":
 
 
 #anoymous functions:lambda
-#python吸取了部分函数式编程的思想，保留了单变量lambda函数
+#python吸取了部分函数式编程的思想，保留了lambda函数作为内置函数，它可像函数式编程一样作为argument进入迭代
 type((lambda x:x+1)(2)) #<class 'int'>
 type(lambda x:x+1)  #<class 'function'>
 type(lambda x:x+1, 2)  #<class 'tuple'>
