@@ -122,3 +122,37 @@ type(lambda x:x+1)  #<class 'function'>
 type(lambda x:x+1, 2)  #<class 'tuple'>
 #问题：lambda函数在python中是如何认定的？
 #解决：？？？？？？？？？？？？？？？？？？？？？
+
+
+#decorator
+'''
+装饰器func的作用就是定义一个return自己的func，被嵌套的func是另一个已定义的func的皮套，目的是不改变原定义的前提下增强其功能
+标准格式：
+def deco(func):
+  def addpower():
+    ..........
+    func()
+    ..........
+  return addpower()
+'''
+def phello():
+	print("hello world")
+def addpower(func):  #简单问题的简单格式
+	print("=============")
+	func()
+	print("=============")
+dcrt_phello(phello)
+
+def decr(func):  #标准格式
+	def addpower():
+		print("=============")
+		func()
+		print("=============")
+	return addpower
+
+
+#问题：func的argument和return问题
+#1.return的时候到底发生了什么？什么时候必须return，什么时候可以不return？
+#2.为什么外层函数的argument是func不是func()？--函数argument允许种类问题
+#解答：?????????????????????
+
