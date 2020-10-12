@@ -126,7 +126,7 @@ type(lambda x:x+1, 2)  #<class 'tuple'>
 
 #decorator
 '''
-装饰器func的作用就是定义一个return自己的func，被嵌套的func是另一个已定义的func的皮套，目的是不改变原定义的前提下增强其功能
+装饰器func的作用就是定义一个func并return，被嵌套的func是另一个已定义的func的皮套，目的是不改变原定义的前提下增强其功能
 标准格式：
 def deco(func):
   def addpower():
