@@ -1,3 +1,18 @@
+#for循环 for i in xxx: 如何正确定义
+lis=[1,2,3,4]
+#正确示例
+for i in range(len(lis)):
+#错误示例1
+for i in lis[i]: #
+#错误示例2
+for i in len(lis): #
+#问题：解释上述错误的问题；for循环应该如何正确定义
+#解决：1.UnboundLocalError: local variable 'i' referenced before assignment，想要直接声明i的位置为lis[i]
+#问题在于下一语句lis[i]=lis[i].....已经指明了具体在哪里操作，这样写不但不合规而且无意义。
+#2.TypeError: 'int' object is not iterable，int类型是不能直接迭代的。
+#for i in xxx: 首先xxx必须是个可迭代对象，
+
+
 # try...exception..finally，与python的错误判断顺序
 try:
     num1="1"
@@ -155,4 +170,8 @@ def decr(func):  #标准格式
 #1.return的时候到底发生了什么？什么时候必须return，什么时候可以不return？
 #2.为什么外层函数的argument是func不是func()？--函数argument允许种类问题
 #解答：?????????????????????
+
+#OOP与python内置数据类型
+#在OOP,objection-oriented programming, 出现instance实例的概念，它是根据“模板”Class创造出来的具体对象
+
 
