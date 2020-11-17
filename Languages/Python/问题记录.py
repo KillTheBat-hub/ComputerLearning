@@ -188,6 +188,7 @@ lily.voice()
 #lily就是instance, 根据class Cat创造出来
 isinstance(str,Interable)
 #问题：python内置函数也都是instance，即OOP方式创造和保存的吗？？？？？？？？？？？
+#https://www.runoob.com/python/python-func-isinstance.html
 
 
 
