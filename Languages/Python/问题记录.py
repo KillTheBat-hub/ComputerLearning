@@ -10,7 +10,9 @@ for i in len(lis): #
 #解决：1.UnboundLocalError: local variable 'i' referenced before assignment，想要直接声明i的位置为lis[i]
 #问题在于下一语句lis[i]=lis[i].....已经指明了具体在哪里操作，这样写不但不合规而且无意义。
 #2.TypeError: 'int' object is not iterable，int类型是不能直接迭代的。
-#for i in xxx: 首先xxx必须是个可迭代对象，
+#for i in xxx: 首先xxx必须是个可迭代对象，查询是否是可迭代对象from collections import Iterable, isinstance(str,Interable)
+#https://blog.csdn.net/loner_fang/article/details/80636805
+
 
 
 # try...exception..finally，与python的错误判断顺序
