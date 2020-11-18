@@ -186,6 +186,7 @@ class Cat():
 lily=Cat("pink","Lily")
 print(lily.color)
 print(lily.voice())
+print(lily.legs)
 print(Cat.legs)  #class attributes
 #lily就是instance, 根据class Cat创造出来
 isinstance(str,Interable)
