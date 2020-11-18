@@ -176,15 +176,17 @@ def decr(func):  #标准格式
 #isinstance,OOP与python内置数据类型
 #在OOP,objection-oriented programming, 出现instance实例的概念，它是根据“模板”Class创造出来的具体对象
 class Cat():
+	legs=4
 	def __init__(self,color,name):
 		self.name=name
 		self.color=color
 	def voice(self):
-		print("meow~")
+		print("meow~ from "+ self.name)
 
 lily=Cat("pink","Lily")
 print(lily.color)
-lily.voice()
+print(lily.voice())
+print(Cat.legs)  #class attributes
 #lily就是instance, 根据class Cat创造出来
 isinstance(str,Interable)
 #问题：python内置函数也都是instance，即OOP方式创造和保存的吗？？？？？？？？？？？
