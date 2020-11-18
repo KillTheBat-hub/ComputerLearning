@@ -194,4 +194,21 @@ isinstance(str,Interable)
 #https://www.runoob.com/python/python-func-isinstance.html
 
 
+#class MagicMethod，self和other
+#magic method
+class Vector2D():
+	def __init__(self,x,y):
+		self.x=x
+		self.y=y
+	def __add__(self,other):
+		return Vector2D(self.x+other.x,self.y+other.y)
+
+
+vector1=Vector2D(1,2)
+vector2=Vector2D(2,0)
+result=vector1+vector2
+result
+#问题：1.magicmethod干什么用，python的基础函数？ 2.class中的magicmethod干什么用，修改python已经写好的基础函数吗？
+#3.self和other为什么要这么定义，用self传入初始值，然后用other区分与self做迭代？本质是next()?
+
 
