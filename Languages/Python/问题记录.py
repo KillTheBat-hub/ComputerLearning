@@ -107,6 +107,14 @@ for i in range(len(list)):
 2-??????????????   https://www.cnblogs.com/chenhuabin/p/11288797.html  for循环迭代器可以迭代list但不能迭代int
 '''
 
+#tuple与list索引
+tu=[1,2,3][3,2,1]
+'''Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list indices must be integers or slices, not tuple'''
+#问题：？？？？？？？？
+
+
 #类型转换后使用function
 lis=["hello","all","you","guys"]
 print(str(lis).upper())
