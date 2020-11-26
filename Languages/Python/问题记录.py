@@ -223,5 +223,28 @@ result=vector1+vector2
 result
 #问题：1.magicmethod干什么用，python的基础函数？ 2.class中的magicmethod干什么用，修改python已经写好的基础函数吗？
 #3.self和other为什么要这么定义，用self传入初始值，然后用other区分与self做迭代？本质是next()?
+#解决：1.magic method即规则，定义了+-*/和print()等基础函数。它的标志为前后双下划线。
+#2.class中的magic method有很多。1)数据传输，__init__和__new__。__init__的作用是instantiation创建实例，将具体的value传入class模板；__new__。
+#2)重新定义规则，使得class中具有独特的运算规则，比如__add__定义加法,__getitem__定义根据index索引,__gt__定义大于等于,__repr__指定print的内容和格式
+
+
+
+#private method
+class Queue:
+	def __init__(self,cont):
+		self._hiddenlist=list(cont)  #self与cont的关系也可通过函数建立；那么x=y实际上是不是也是一种函数？
+	def push(self,value):
+		return self._hiddenlist.insert(0,value)
+	def pop(self):
+		return self._hiddenlist.pop(-2)
+	def __repr__(self):   #指定print()的内容和格式，必须有return否则函数没有完成，不用return用print是不行的
+		return "Queue({})".format(self._hiddenlist)  #这里甚至不用传入cont，为什么呢？直接指向了ID吗？
+queue1=Queue(([0,0,0],[1,1,1]))  #这里的错误：1.Queue([],[])  2.Queue([][])，似乎看到括号首先按tuple处理 3.2的基础上再加一层括号，Queue(([][]))
+print(queue1)
+queue1.pop()
+print(queue1)	
+#每个method里的self指的应该是class里这同一个self值吧？
+
+
 
 
