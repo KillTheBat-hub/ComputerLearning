@@ -246,5 +246,20 @@ print(queue1)
 #每个method里的self指的应该是class里这同一个self值吧？
 
 
+#class methods: instance method, class method, static method
+class Example:
+	def __init__(self):
+		pass 
+	def instance_met(self):
+		'''实例方法，至少有一个self参数'''
+		print("intance method")
+	def class_met(cls):
+		'''类方法，至少有一个cls参数'''
+		print("class method")
+	def static_met():
+		'''无默认参数'''
+		print("static method")   
+
+
 
 
