@@ -262,4 +262,41 @@ class Example:
 
 
 
+#输入长宽高，返回体积; 使用class method改写
+class Volume:
+	def __init__(self,length,width,height):
+		self.length=length
+		self.width=width
+		self.height=height
+	def volume_caculate(self):
+		return self.length * self.width * self.height
+	@classmethod #decorator
+	def vlm(cls,side_length):
+		return cls(side_length,side_length,side_length)
+		#class method也像decorator
+	@classmethod
+	def sayhi(cls):
+		return "Hi!"
+
+v=Volume.vlm(5)
+print(v.volume_caculate())
+print(Volume.sayhi())
+
+
+#使用static method判断pizza馅料
+class Pizza:
+	def __init__(self,topping):
+		self.topping=topping
+	@staticmethod
+	def validate_toppings(topping):
+		if topping=="pineapple":
+			raise ValueError("there is no pineapples!")
+		else:
+			return True
+
+ingredients=["cheese","onions","spam"]
+if all(Pizza.validate_toppings(i) for i in ingredients):   #all(),如果函数中的项全部为True则返回True，否则返回False
+	pizza=Pizza(ingredients)
+#?????为什么这里还没有传入ingredients但是if语句没有报错
+
 
