@@ -294,9 +294,9 @@ class Pizza:
 		else:
 			return True
 
-ingredients=["cheese","onions","spam"]
+piz=["cheese","onions","spam"]
 if all(Pizza.validate_toppings(i) for i in ingredients):   #all(),如果函数中的项全部为True则返回True，否则返回False
-	pizza=Pizza(ingredients)
+	piz=Pizza(piz)
 '''
 #以另一种方式改写
 def test(lis):
@@ -307,5 +307,11 @@ def test(lis):
 		lis=Pizza(lis)
 		return lis
 '''
+	@property  #用property实现对于instance read-only
+	def is_pineapple_allowed(self):
+		return False
+pizza=Pizza(["apple","onions"])	
+pizza.is_pineapple_allowed = True
+Pizza.is_pineapple_allowed = True
 
 
