@@ -297,6 +297,15 @@ class Pizza:
 ingredients=["cheese","onions","spam"]
 if all(Pizza.validate_toppings(i) for i in ingredients):   #all(),如果函数中的项全部为True则返回True，否则返回False
 	pizza=Pizza(ingredients)
-#?????为什么这里还没有传入ingredients但是if语句没有报错
+'''
+#以另一种方式改写
+def test(lis):
+	empty=[]
+	for i in lis:
+		empty.append(Pizza.is_toppings(i))
+	if False not in empty:
+		lis=Pizza(lis)
+		return lis
+'''
 
 
