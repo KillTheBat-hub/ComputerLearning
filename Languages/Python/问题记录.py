@@ -221,11 +221,14 @@ vector1=Vector2D(1,2)
 vector2=Vector2D(2,0)
 result=vector1+vector2
 result
-#问题：1.magicmethod干什么用，python的基础函数？ 2.class中的magicmethod干什么用，修改python已经写好的基础函数吗？
-#3.self和other为什么要这么定义，用self传入初始值，然后用other区分与self做迭代？本质是next()?
-#解决：1.magic method即规则，定义了+-*/和print()等基础函数。它的标志为前后双下划线。
-#2.class中的magic method有很多。1)数据传输，__init__和__new__。__init__的作用是instantiation创建实例，将具体的value传入class模板；__new__。
-#2)重新定义规则，使得class中具有独特的运算规则，比如__add__定义加法,__getitem__定义根据index索引,__gt__定义大于等于,__repr__指定print的内容和格式
+'''
+问题：1.magicmethod干什么用，python的基础函数？ 2.class中的magicmethod干什么用，修改python已经写好的基础函数吗？
+3.self和other为什么要这么定义，用self传入初始值，然后用other区分与self做迭代？本质是next()?
+解决：1.magic method即规则，定义了+-*/和print()等基础函数。它的标志为前后双下划线。
+2.class中的magic method有很多。1)数据传输，__init__和__new__。__init__的作用是instantiation创建实例，将具体的value传入class模板；__new__。
+  2)重新定义规则，使得class中具有独特的运算规则，比如__add__定义加法,__getitem__定义根据index索引,__gt__定义大于等于,__repr__指定print的内容和格式
+3.self
+  '''
 
 
 
@@ -313,5 +316,9 @@ def test(lis):
 pizza=Pizza(["apple","onions"])	
 pizza.is_pineapple_allowed = True
 Pizza.is_pineapple_allowed = True
+
+
+#前后下划线https://www.runoob.com/w3cnote/python-5-underline.html  还是不太明白，具体怎么用
+#
 
 
