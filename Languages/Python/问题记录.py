@@ -228,7 +228,8 @@ result
 2.class中的magic method有很多。1)数据传输，__init__和__new__。__init__的作用是instantiation创建实例，将具体的value传入class模板；__new__。
   2)重新定义规则，使得class中具有独特的运算规则，比如__add__定义加法,__getitem__定义根据index索引,__gt__定义大于等于,__repr__指定print的内容和格式
 3.首先要明白self，other都是约定俗成的命名，如果换成别的也是可以的，比如叫variable1,variable2。
-  self，在python设计中指向实例本身，在建立instance时不需要手动指定，而是python自动把当前运算的instance绑定到self上。
+  self，在python设计中指向实例本身，在建立instance时不需要手动指定，而是python自动把当前运算的instance绑定到self上。面向对象编程，起码每次都得明白地指出哪个是对象吧。
+  在本例中，vector1调用时，self=vector1=Vector2D(1,2)
   '''
 
 
