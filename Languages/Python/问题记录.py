@@ -227,12 +227,14 @@ result
 解决：1.magic method即规则，定义了+-*/和print()等基础函数。它的标志为前后双下划线。
 2.class中的magic method有很多。1)数据传输，__init__和__new__。__init__的作用是instantiation创建实例，将具体的value传入class模板；__new__。
   2)重新定义规则，使得class中具有独特的运算规则，比如__add__定义加法,__getitem__定义根据index索引,__gt__定义大于等于,__repr__指定print的内容和格式
-3.self
+3.首先要明白self，other都是约定俗成的命名，如果换成别的也是可以的，比如叫variable1,variable2。
+  self，在python设计中指向实例本身，在建立instance时不需要手动指定，而是python自动把当前运算的instance绑定到self上。
   '''
 
 
 
-#private method
+#private method私有方法
+#前后下划线https://www.runoob.com/w3cnote/python-5-underline.html  还是不太明白，具体怎么用
 class Queue:
 	def __init__(self,cont):
 		self._hiddenlist=list(cont)  #self与cont的关系也可通过函数建立；那么x=y实际上是不是也是一种函数？
@@ -318,7 +320,9 @@ pizza.is_pineapple_allowed = True
 Pizza.is_pineapple_allowed = True
 
 
-#前后下划线https://www.runoob.com/w3cnote/python-5-underline.html  还是不太明白，具体怎么用
-#
+
+#class intended类继承
+#继承父类后，重新定义同名的会覆盖（attribute，method分开讨论）？那么继承有什么意义？
+
 
 
