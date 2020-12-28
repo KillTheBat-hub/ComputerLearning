@@ -1,6 +1,8 @@
 #compiler编译器
 #问题：编译器的中间语言会存储到某处以便以后直接调用吗？？？？？？？？？
 
+#python中空格和内存的问题 https://bbs.csdn.net/topics/392326242
+#问题：带有空格如何改变内存方式？
 
 
 #for循环 for i in xxx: 如何正确定义
