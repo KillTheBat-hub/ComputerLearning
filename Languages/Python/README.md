@@ -1,5 +1,7 @@
 # python-learning-CN  
 [learning]
+
+滚动学习策略 - 快速、多轮的学习模式，“用中学”  
  
 #### python学习路线：  
 1. sololearn python + 廖雪峰教程  
